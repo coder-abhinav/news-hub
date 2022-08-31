@@ -23,7 +23,7 @@ const NewsLoader = ({type}) => {
   return (
     <div>
         <Navbar />
-      <h1 style={{ textAlign: "center", margin: "2%" }}>Latest News</h1>
+      <h1 style={{ textAlign: "center", margin: "2%" }}>Latest { type } News </h1>
         <div className="container">
           <div className="row">
             
@@ -47,3 +47,4 @@ const NewsLoader = ({type}) => {
 };
 
 export default NewsLoader;
+
