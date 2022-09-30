@@ -7,13 +7,11 @@ const NewsLoader = ({type}) => {
   const [data, setData] = useState([]);
 
   const getNews = () => {
-    console.log("called");
     axios
       .get(
         "https://newsapi.org/v2/top-headlines?apiKey=627fbef341e44da7b14e38dead8739dd&q="+type
       )
       .then((response) => {
-        console.log(response);
         setData(response.data.articles);
       });
   };
