@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Route , Routes , BrowserRouter} from 'react-router-dom';
-import NewsLoader from './newsLoader';
+import NewsLoader from './Components/newsLoader';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

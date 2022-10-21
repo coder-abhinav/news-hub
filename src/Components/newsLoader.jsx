@@ -1,29 +1,27 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Card from "./Components/Card";
-import Navbar from "./Components/Navbar";
+import Navbar from "./Navbar";
 
-const Home = () => {
+const NewsLoader = ({type}) => {
   const [data, setData] = useState([]);
 
   const getNews = () => {
-    console.log("called");
     axios
       .get(
-        "https://newsapi.org/v2/top-headlines?country=in&apiKey=627fbef341e44da7b14e38dead8739dd"
+        "https://newsapi.org/v2/top-headlines?apiKey=627fbef341e44da7b14e38dead8739dd&q="+type
       )
       .then((response) => {
-        console.log(response);
         setData(response.data.articles);
       });
   };
   useEffect(() => {
     getNews();
-  }, []);
+  }, [type]);
   return (
     <div>
-      <Navbar />
-      <h1 style={{ textAlign: "center", margin: "2%" }}>Latest News</h1>
+        <Navbar />
+      <h1 style={{ textAlign: "center", margin: "2%" }}>Latest { type } News </h1>
         <div className="container">
           <div className="row">
             
@@ -46,4 +44,5 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default NewsLoader;
+
