@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import Card from "./Components/Card";
+import Card from "./Card";
 import Navbar from "./Navbar";
 
 const NewsLoader = ({type}) => {
