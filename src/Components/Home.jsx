@@ -23,7 +23,7 @@ const Home = () => {
   return (
     <div>
       <Navbar />
-      <h1 style={{ textAlign: "center", margin: "2%" }}>Latest News</h1>
+      <h1 className = "newsLoaderHeading">Latest News</h1>
         <div className="container">
           <div className="row">
             

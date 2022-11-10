@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Card from "./Card";
 import Navbar from "./Navbar";
+import "./comp.css";
 
 const NewsLoader = ({type}) => {
   const [data, setData] = useState([]);
@@ -21,7 +22,7 @@ const NewsLoader = ({type}) => {
   return (
     <div>
         <Navbar />
-      <h1 style={{ textAlign: "center", margin: "2%" }}>Latest { type } News </h1>
+      <h1 className="newsLoaderHeading" >Latest { type } News </h1>
         <div className="container">
           <div className="row">
             
